@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confidence Sociedade Corretora de Câmbio S.A.</title>
+    <style>
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #0d2c54;
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #c4e0e5;
+        }
+
+        /* Banner Principal */
+        .hero {
+            background: linear-gradient(rgba(13, 44, 84, 0.65), rgba(13, 44, 84, 0.65)), 
+                        url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        /* Seções do Site */
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0d2c54;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #4b86b4;
+            margin: 10px auto 0;
+        }
+
+        /* Quem Somos */
+        #quem-somos p {
+            font-size: 1.1rem;
+            text-align: justify;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Serviços */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 4px solid #4b86b4;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: #0d2c54;
+            margin-bottom: 15px;
+        }
+
+        /* Políticas de Privacidade */
+        #privacidade .policy-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        #privacidade p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #0a1c33;
+            color: #b3b9c1;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            border-top: 5px solid #4b86b4;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+        }
+
+        .footer-info p {
+            margin: 5px 0;
+        }
+
+        .copyright {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #77828f;
+        }
+
+        /* Responsividade Básica */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">Confidence Câmbio</div>
+            <nav>
+                <a href="#quem-somos">Quem Somos</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#privacidade">Privacidade</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Soluções em Câmbio com Confiança e Solidez</h1>
+            <p>Conectando você e sua empresa ao mercado global de forma ágil, segura e transparente.</p>
+        </div>
+    </section>
+
+    <section id="quem-somos">
+        <h2>Quem Somos</h2>
+        <p>
+            A <strong>Confidence Sociedade Corretora de Câmbio S.A.</strong> é uma instituição financeira sólida e experiente, focada em entregar as melhores soluções de mercado de câmbio para nossos clientes. Com transparência, segurança e eficiência regulatória, garantimos operações sob medida para atender às demandas corporativas e individuais de forma descomplicada.
+        </p>
+    </section>
+
+    <hr style="border: 0; border-top: 1px solid #e0e0e0; max-width: 1100px; margin: 0 auto;">
+
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Compas e Vendas de Moedas</h3>
+                <p>Disponibilidade das principais moedas estrangeiras do mercado com taxas competitivas e total segurança.</p>
+            </div>
+            <div class="service-card">
+                <h3>Transferências Internacionais</h3>
+                <p>Envio e recebimento de recursos do exterior para pessoas físicas e jurídicas com agilidade incomparável.</p>
+            </div>
+            <div class="service-card">
+                <h3>Consultoria em Câmbio</h3>
+                <p>Suporte especializado para planejar suas operações cambiais e mitigar riscos de mercado.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr style="border: 0; border-top: 1px solid #e0e0e0; max-width: 1100px; margin: 0 auto;">
+
+    <section id="privacidade">
+        <h2>Políticas de Privacidade</h2>
+        <div class="policy-box">
+            <p>A <strong>Confidence Sociedade Corretora de Câmbio S.A.</strong> valoriza a segurança e a privacidade dos dados de seus clientes. Em conformidade com a Lei Geral de Proteção de Dados (LGPD), garantimos que todas as informações coletadas em nossa plataforma são utilizadas estritamente para o cumprimento de obrigações regulatórias junto ao Banco Central do Brasil e para a melhoria dos nossos serviços.</p>
+            <p>Seus dados pessoais não são compartilhados com terceiros sem consentimento prévio, exceto por força de determinação legal. Adotamos rígidos padrões de segurança digital para proteger suas informações contra acessos não autorizados.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <strong>Confidence Sociedade Corretora de Câmbio S.A.</strong><br>
+                <strong>CNPJ:</strong> 04.913.129/0001-41<br>
+                <strong>Endereço:</strong> Avenida Eng Luiz Carlos Berrini, 105 - Andar 5 Conj 51 e 52<br>
+                Bairro: Cidade Monções | CEP: 04571-010 | São Paulo - SP
+            </div>
+            <div class="copyright">
+                &copy; 2026 Confidence Câmbio. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
