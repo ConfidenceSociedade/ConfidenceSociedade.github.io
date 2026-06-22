@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIGA+ Fibra - Atendimento</title>
+    <title>Confidence Sociedade Corretora de Câmbio S.A.</title>
     <style>
-        /* Estilos Gerais */
+        /* Estilos Globais */
         * {
             margin: 0;
             padding: 0;
@@ -14,120 +14,164 @@
         }
 
         body {
-            background-color: #f4f7f6;
             color: #333;
             line-height: 1.6;
+            background-color: #f9f9f9;
         }
 
+        /* Cabeçalho / Navegação */
         header {
-            background-color: #ffffff;
-            padding: 15px 20px;
-            text-align: center;
+            background-color: #0b2545;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        header h1 {
-            color: #ff5a00; /* Cor aproximada da marca Giga+ */
-            font-size: 24px;
+        .logo {
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
         }
 
-        /* Seção do Banner Inicial */
-        .hero-section {
-            position: relative;
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #8da9c4;
+        }
+
+        /* Banner Principal (Imagem de Capa) */
+        .hero {
+            background: linear-gradient(rgba(11, 37, 69, 0.7), rgba(11, 37, 69, 0.7)), url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            color: white;
+            color: #fff;
+            padding: 0 20px;
         }
 
-        .hero-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            filter: brightness(60%);
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
         }
 
-        .hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 90%;
+        .hero p {
+            font-size: 1.2rem;
             max-width: 600px;
         }
 
-        .hero-content h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        /* Seções Gerais */
+        section {
+            padding: 60px 10%;
         }
 
-        /* Seção de Serviços / 2ª Via */
-        .services-section {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
+        section h2 {
             text-align: center;
+            color: #134074;
+            margin-bottom: 40px;
+            position: relative;
         }
 
-        .services-section h3 {
-            font-size: 24px;
-            color: #222;
-            margin-bottom: 20px;
+        section h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #8da9c4;
+            margin: 10px auto 0;
         }
 
-        .card {
-            background: white;
+        /* Seção Serviços */
+        .servicos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .servico-card {
+            background: #fff;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
         }
 
-        /* Botões */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #25D366; /* Cor do WhatsApp */
-            color: white;
-            padding: 12px 25px;
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        .servico-card:hover {
+            transform: translateY(-5px);
         }
 
-        .btn:hover {
-            background-color: #128C7E;
-            transform: translateY(-2px);
+        .servico-card h3 {
+            color: #134074;
+            margin-bottom: 15px;
         }
 
-        .btn-hero {
-            background-color: #ff5a00;
+        /* Seção Quem Somos */
+        .quem-somos {
+            background-color: #eef4f8;
         }
 
-        .btn-hero:hover {
-            background-color: #e04f00;
+        .quem-somos p {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            text-align: justify;
+        }
+
+        /* Seção Políticas */
+        .politicas p {
+            max-width: 800px;
+            margin: 0 auto 15px;
+            font-size: 0.95rem;
         }
 
         /* Rodapé */
         footer {
+            background-color: #0b2545;
+            color: #8da9c4;
+            padding: 40px 10%;
+            font-size: 0.9rem;
+            border-top: 3px solid #134074;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
-            padding: 20px;
-            background-color: #222;
-            color: #777;
-            font-size: 14px;
-            margin-top: 60px;
+            gap: 10px;
+        }
+
+        .footer-content .empresa-nome {
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.1rem;
         }
 
         /* Responsividade */
-        @media (max-width: 600px) {
-            .hero-image {
-                height: 300px;
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
             }
-            .hero-content h2 {
-                font-size: 20px;
+            nav a {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -135,31 +179,57 @@
 <body>
 
     <header>
-        <h1>GIGA+ FIBRA</h1>
+        <div class="logo">CONFIDENCE CÂMBIO</div>
+        <nav>
+            <a href="#servicos">Serviços</a>
+            <a href="#quem-somos">Quem Somos</a>
+            <a href="#privacidade">Políticas de Privacidade</a>
+        </nav>
     </header>
 
-    <section class="hero-section">
-        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80" alt="Atendimento Giga+" class="hero-image">
-        <div class="hero-content">
-            <h2>Precisando de suporte ou querendo assinar?</h2>
-            <a href="https://wa.me/5517981654155?text=Olá,%20gostaria%20de%20falar%20com%20um%20atendente." class="btn btn-hero" target="_blank">Falar com Atendente</a>
+    <section class="hero">
+        <h1>Soluções em Câmbio com Total Confiança</h1>
+        <p>Segurança e agilidade nas suas operações de câmbio comerciais e financeiras.</p>
+    </section>
+
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="servicos-container">
+            <div class="servico-card">
+                <h3>Câmbio Comercial</h3>
+                <p>Operações de importação e exportação com as melhores taxas do mercado e atendimento personalizado.</p>
+            </div>
+            <div class="servico-card">
+                <h3>Remessas Internacionais</h3>
+                <p>Envio e recebimento de valores do exterior com rapidez, segurança e total conformidade regulatória.</p>
+            </div>
+            <div class="servico-card">
+                <h3>Consultoria em Câmbio</h3>
+                <p>Suporte especializado para estruturação de operações financeiras internacionais complexas.</p>
+            </div>
         </div>
     </section>
 
-    <section class="services-section">
-        <h3>Autoatendimento Rápido</h3>
-        
-        <div class="card">
-            <h4>Retirar 2ª Via da Fatura</h4>
-            <p style="margin: 15px 0; color: #666;">Esqueceu de pagar ou não recebeu o seu boleto? Solicite a segunda via agora mesmo de forma prática pelo nosso WhatsApp.</p>
-            <a href="https://wa.me/5517981654155?text=Olá,%20gostaria%20da%20segunda%20via%20da%20minha%20fatura." class="btn" target="_blank">
-                Solicitar 2ª Via pelo WhatsApp
-            </a>
-        </div>
+    <section id="quem-somos" class="quem-somos">
+        <h2>Quem Somos</h2>
+        <p>A <strong>Confidence Sociedade Corretora de Câmbio S.A.</strong> é uma instituição financeira sólida e autorizada a operar no mercado de câmbio, dedicada a oferecer soluções inteligentes e seguras para pessoas jurídicas e físicas.</p>
+        <p>Com anos de experiência e uma equipe de especialistas qualificados, nosso objetivo principal é simplificar os processos de comércio exterior e transferências internacionais de nossos clientes, atuando sempre com transparência, ética e agilidade.</p>
+    </section>
+
+    <section id="privacidade" class="politicas">
+        <h2>Políticas e Privacidade</h2>
+        <p>A Confidence Sociedade Corretora de Câmbio S.A. tem o compromisso de proteger a privacidade e os dados pessoais de seus clientes e parceiros. Em conformidade com a Lei Geral de Proteção de Dados (LGPD) e as diretrizes do Banco Central do Brasil, adotamos rigorosos padrões de segurança da informação.</p>
+        <p>Todos os dados coletados em nossas plataformas são utilizados exclusivamente para o cumprimento de obrigações regulatórias, prevenção à lavagem de dinheiro (PLD/FTP) e para a execução segura das operações contratadas pelo cliente. Não compartilhamos suas informações com terceiros sem a devida autorização legal.</p>
     </section>
 
     <footer>
-        <p>&copy; 2026 GIGA+ Fibra. Todos os direitos reservados. Site demonstrativo.</p>
+        <div class="footer-content">
+            <p class="empresa-nome">CONFIDENCE SOCIEDADE CORRETORA DE CAMBIO S.A</p>
+            <p>CNPJ: 04.913.129/0001-41</p>
+            <p>AV ENG LUIZ CARLOS BERRINI, 105 - ANDAR 5 CJ 51 E 52</p>
+            <p>CIDADE MONCOES - SÃO PAULO - SP - CEP: 04571-010</p>
+            <p>Brasil</p>
+        </div>
     </footer>
 
 </body>
